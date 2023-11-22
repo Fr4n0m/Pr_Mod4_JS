@@ -1,0 +1,65 @@
+:root {
+
+    /* Fonts */
+    --font-primary: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-secondary: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-lucida: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Fonts sizes */
+    --font-size-10: 10px;
+    --font-size-11: 11px;
+    --font-size-12: 12px;
+    --font-size-13: 13px;
+    --font-size-14: 14px;
+    --font-size-15: 15px;
+    --font-size-16: 16px;
+    --font-size-17: 17px;
+    --font-size-18: 18px;
+    --font-size-19: 19px;
+    --font-size-20: 20px;
+    --font-size-21: 21px;
+    --font-size-22: 22px;
+    --font-size-23: 23px;
+    --font-size-24: 24px;
+    --font-size-25: 25px;
+    --font-size-30: 30px;
+    --font-size-35: 35px;
+
+    /* Fonts colors*/
+    --color-primary: #1A1D24;
+    --color-white: white;
+    --color-red: red;
+    --color-red-dark: rgb(173, 0, 0);
+    --color-pink: #FF4655;
+    --color-yellow: #f6ff00ce;
+    --color-orange: #e8834f;
+    --color-green: #008B47;
+    --color-blue: #0A75BC;
+    --color-grey: #7a7a7a;
+    --color-black: black;
+    --color-black-grey: #333;
+
+    --color-twitter: #1DA1F2;
+    --color-twitter-dark: #177dbc;
+
+    --color-facebook: #4267B2;
+    --color-facebook-dark: #304b81;
+
+    --color-instagram: #C13584;
+    --color-instagram-dark: #8c2760;
+
+    --color-youtube: #FF0000;
+    --color-youtube-dark: #b50202;
+
+    --color-transparent: transparent;
+    --color-transparent-white: #ffffff32;
+    --color-transparent-black: #0000005c;
+    --color-transparent-black-2: #000000a4;
+    --color-transparent-red: #ff00006a;
+
+     /* Transitions */
+     --transitions-time-1: 0.5s;
+     --transitions-time-2: 0.2s;
+     --transitions-time-3: 3s;
+     --transitions-time-4: 1s;
+}

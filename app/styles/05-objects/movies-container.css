@@ -1,0 +1,114 @@
+#movieContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin: 150px 100px 100px 100px;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 500px;
+    margin: auto;
+    flex-grow: 1;
+}
+
+.movie-card img {
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 30px var(--color-black);
+        transition: all 0.3s;
+    }
+}
+
+.movie-card h2 {
+    font-family: var(--font-lucida);
+    font-size: var(--font-size-20);
+    text-transform: uppercase;
+    text-align: left;
+    margin: -30px 0 0 10px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 2px var(--color-black);
+    color: var(--color-white);
+}
+
+.movie-card p {
+    font-family: var(--font-lucida);
+    font-size: var(--font-size-10);
+    margin: 20px 7px 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    color: var(--color-white);
+
+    &:hover {
+        cursor: pointer;
+        color: var(--color-grey);
+        transition: all 0.3s;
+    }
+}
+
+.movie-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    color: var(--color-white);
+}
+
+.movie-description.expanded {
+    overflow: visible;
+    white-space: normal;
+    display: block;
+}
+
+#movieContainer.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+}
+
+.list-view .movie-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 0;
+}
+
+.list-view .movie-card img {
+    width: 100px;
+    height: auto;
+}
+
+.list-view .movie-card h2 {
+    font-family: var(--font-lucida);
+    font-size: var(--font-size-12);
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 2px var(--color-black);
+    color: var(--color-white);
+}
+
+.list-view .movie-card p {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-view .movie-card p {
+    flex-grow: 1;
+    -webkit-line-clamp: initial;
+}

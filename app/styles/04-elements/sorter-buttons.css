@@ -1,0 +1,14 @@
+.sort-container {
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    margin: -90px 0 0 430px;
+}
+
+.sort-label, .category-label {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-13);
+    text-transform: uppercase;
+    margin: 3px -10px 0 0;
+    color: var(--color-white);
+}

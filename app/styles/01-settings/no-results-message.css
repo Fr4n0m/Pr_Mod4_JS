@@ -1,0 +1,11 @@
+.no-results-message {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-30); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 50px 0 0 400px;
+    color: var(--color-white); 
+  }
+  
