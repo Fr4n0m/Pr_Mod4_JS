@@ -1,6 +1,6 @@
 import { searchMovies } from "./utils/search-movies.js";
 import { showMovies } from "./utils/show-movies.js";
-import { SortFilterOptions } from "./utils/sort-movies.js";
+import { sortFilterOptions, sortCategoryOptions } from "./utils/sort-movies.js";
 import { updateMovies, allMovies } from "./utils/update-movies.js"
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   let currentPage = 1;
 
   await updateMovies(currentPage, "now_playing", "desc");
+  showMovies(allMovies, movieContainer);
 
   // Cambiar vista
   toggleViewButton.addEventListener("click", function () {
@@ -56,14 +57,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     await updateMovies(currentPage, sortFilterSelector.value, sortOrderSelector.value);
   });
 
+  await sortFilterOptions(), sortCategoryOptions();
+
   // Order
   sortButton.addEventListener("click", async function () {
+    const selectedCategory = sortCategorySelector.value;
     const sortBy = sortFilterSelector.value;
     const sortOrder = sortOrderSelector.value;
-    const category = sortCategorySelector.value;
-    await updateMovies(currentPage, sortBy, sortOrder, category);
-    showMovies(allMovies, movieContainer);
+    await updateMovies(currentPage, sortBy, sortOrder, selectedCategory);
   });
 
-  await SortFilterOptions();
+  sortCategorySelector.addEventListener("change", function () {
+    const selectedCategory = sortCategorySelector.value;
+    const sortBy = sortFilterSelector.value;
+    const sortOrder = sortOrderSelector.value;
+    console.log("Categoría seleccionada:", selectedCategory);
+    updateMovies(currentPage, sortBy, sortOrder, selectedCategory);
+  });
 });

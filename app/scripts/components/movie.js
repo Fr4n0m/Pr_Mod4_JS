@@ -64,6 +64,7 @@ class Movie {
       releaseYear.textContent = `Año de lanzamiento: ${this.releaseYear}`;
       const views = document.createElement("p");
       views.textContent = `Vistas: ${this.views}`;
+      
       movieCard.appendChild(rating);
       movieCard.appendChild(releaseYear);
       movieCard.appendChild(views);
