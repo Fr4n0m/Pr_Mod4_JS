@@ -37,6 +37,18 @@
     color: var(--color-white);
 }
 
+.info-container {
+    display: flex;
+    gap: 70px;
+    margin: 10px 0 -15px 10px;
+}
+
+.movie-card h3 {
+    font-family: var(--font-lucida);
+    font-size: var(--font-size-10);
+    color: var(--color-white);
+}
+
 .movie-card p {
     font-family: var(--font-lucida);
     font-size: var(--font-size-10);

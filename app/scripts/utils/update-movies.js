@@ -1,6 +1,5 @@
 import { sortMovies } from "./sort-movies.js";
 import { showMovies } from "./show-movies.js";
-import { filterMoviesByCategory } from "./sort-movies.js";
 import { Movie } from "../components/movie.js";
 
 let allMovies = [];

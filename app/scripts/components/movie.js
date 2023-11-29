@@ -1,5 +1,13 @@
 class Movie {
-  constructor(title, description, poster, rating, releaseYear, views, category) {
+  constructor(
+    title,
+    description,
+    poster,
+    rating,
+    releaseYear,
+    views,
+    category
+  ) {
     this.title = title;
     this.description = description;
     this.poster = poster;
@@ -28,8 +36,8 @@ class Movie {
         : "";
       const rating = movieData.vote_average;
       const releaseYear = new Date(movieData.release_date).getFullYear();
-      const views = movieData.views || 0;
-      const category = movieData.category || "Sin categoría";
+      const views = movieData.popularity || 0;
+      const category = movieData.genre_ids || "Sin categoría";
       return new Movie(
         movieData.title,
         movieData.overview,
@@ -53,25 +61,34 @@ class Movie {
     const title = document.createElement("h2");
     title.textContent = this.title;
 
+    const info = document.createElement("div");
+    info.classList.add("info-container");
+
+    const year = document.createElement("h3");
+    year.textContent = "Year: " + this.releaseYear;
+    info.appendChild(year);
+
+    const rating = document.createElement("h3");
+    rating.textContent = "Rating: " + this.rating;
+    info.appendChild(rating);
+
     const description = document.createElement("p");
     description.classList.add("movie-description");
     description.textContent = this.description;
 
     if (isListView) {
-      const rating = document.createElement("p");
-      rating.textContent = `Rating: ${this.rating}`;
-      const releaseYear = document.createElement("p");
-      releaseYear.textContent = `Año de lanzamiento: ${this.releaseYear}`;
-      const views = document.createElement("p");
+      const views = document.createElement("h3");
       views.textContent = `Vistas: ${this.views}`;
-      
-      movieCard.appendChild(rating);
-      movieCard.appendChild(releaseYear);
+
+      const categories = document.createElement("h3");
+      categories.textContent = determineCategoryById(this.category);
+
       movieCard.appendChild(views);
     }
 
     movieCard.appendChild(poster);
     movieCard.appendChild(title);
+    movieCard.appendChild(info);
     movieCard.appendChild(description);
 
     movieContainer.appendChild(movieCard);

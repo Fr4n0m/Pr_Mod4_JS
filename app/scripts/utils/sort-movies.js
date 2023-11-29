@@ -273,4 +273,15 @@ function getFilterLabelCategory(filter) {
   }
 }
 
+/* determineCategoryById(categories) {
+  const movie_categories = [];
+  categories.forEach(genre_id => {
+    genres.forEach(genre => {
+      if (genre_id === genre) {
+        movie_categories += genre;
+      }
+    });
+  });
+} */
+
 export { sortMovies, sortFilterOptions, sortCategoryOptions, filterMoviesByCategory };

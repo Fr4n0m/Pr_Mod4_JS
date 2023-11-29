@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   await sortFilterOptions(), sortCategoryOptions();
 
-  // Order
+  // Sort
   sortButton.addEventListener("click", async function () {
     const selectedCategory = sortCategorySelector.value;
     const sortBy = sortFilterSelector.value;
